@@ -38,7 +38,7 @@
     --heading-font-size-xs: 22px;
 
     /* nav height */
-    --nav-height: 64px;
+    --nav-height: 70px;
 }
 
 /* fallback fonts */
@@ -74,11 +74,19 @@
 body {
     display: none;
     margin: 0;
-    background-color: var(--background-color);
     color: var(--text-color);
-    font-family: var(--body-font-family);
-    font-size: var(--body-font-size-m);
-    line-height: 1.6;
+    color: #000;
+    font-size: 0.9375rem;
+    letter-spacing: 0.1px;
+    line-height: 1.9;
+}
+
+@media print, screen and (min-width: 48em) {
+    body {
+        font-size: 1rem;
+        letter-spacing: 0.2px;
+        line-height: 1.75;
+    }
 }
 
 body.appear {
@@ -267,4 +275,120 @@ main .section.highlight {
     background-color: var(--light-color);
     margin: 0;
     padding: 40px 0;
+}
+
+.ce-fact-slider .fact-text,
+.ce-fact-slider .fact-subline,
+.ce-fact-slider .fact-number,
+.sdg-icon-text [data-tippy-root] a,
+.sdg-icon-text [data-tippy-root] h3,
+.ce-graphic-natural-capital .table-container .natural-capital td.side,
+.ce-graphic-natural-capital .table-container .natural-capital thead th,
+.ce-start-dropdown .ce-start-dropdown-wrapper button.ce-start-dropdown,
+.ce-table table thead th,
+.dce-accordeon .accordion-title,
+.magazine-header .header-text p:first-letter,
+.story-top-teaser .teaser-container .headline,
+.story-top-teaser .teaser-container .headline p,
+.desktop-menu-wrapper .dropdown.menu .category-parent-link,
+.facts-figures-copy,
+.navigation-second-level,
+.navigation-heading,
+.links-secondary,
+.links-download,
+.links-cta--white,
+.links-cta,
+.slick-dots li button,
+.label-dark,
+h6,
+.headline-6,
+.headline-5-uppercase,
+h4,
+.headline-4,
+h3,
+.headline-3,
+.headline-3 > p,
+h2,
+.headline-2,
+h1,
+.headline-1,
+.category,
+body p b,
+body p strong {
+    font-family: "Averta PE Extrabold";
+}
+
+.ce-facts-dynamic
+    .switch-buttons
+    .switch-buttons-wrapper
+    .switch-button-second.active,
+.ce-facts-dynamic
+    .switch-buttons
+    .switch-buttons-wrapper
+    .switch-button-first.active,
+.ce-quote .ce-quote-textwrapper .ce-quote-text .ce-quote-text-author,
+.tx-powermail .powermail_select,
+.tx-powermail .powermail_fieldwrap_type_textarea .powermail-label,
+.tx-powermail .powermail_label,
+.tx-powermail .powermail_field .powermail_input,
+.tx-powermail .powermail_field .powermail_textarea,
+.shop-nav-wrapper ul li.current,
+.lang-nav-wrapper ul li.current,
+.copy-medium b,
+.copy-medium strong,
+.copy b,
+.copy strong,
+.label-medium,
+h5,
+.headline-5,
+body table b,
+body table strong,
+body p b,
+body p strong,
+body li b,
+body li strong {
+    font-family: "Averta PE Bold";
+}
+
+.ce-table table tr,
+.ce-it-textwrapper .ce-it-text .img-caption,
+.ce-images .caption,
+.dce-map .copy-medium,
+.flatpickr-calendar .flatpickr-monthSelect-month,
+.flatpickr-calendar .flatpickr-current-month input.cur-year,
+.footer .footer-bottom .copyright,
+.footer .footer-bottom .title,
+.footer .footer-content,
+.footer .footer-submenu,
+.off-canvas-right-badge-wrapper button.label-light {
+    font-family: "Averta PE Regular";
+}
+
+.ce-graphic-natural-capital .description,
+.ce-graphic-natural-capital .key,
+.ce-facts-dynamic .switch-buttons .switch-buttons-wrapper .switch-button-second,
+.ce-facts-dynamic .switch-buttons .switch-buttons-wrapper .switch-button-first,
+.ce-quote .ce-quote-textwrapper .ce-quote-text .ce-quote-text-authorsubline,
+.tx-powermail .powermail_field .powermail_input:focus ~ .powermail_label,
+.tx-powermail .powermail_field .powermail_textarea:focus ~ .powermail_label,
+.tx-powermail .powermail_field .powermail_input:focus,
+.tx-powermail .powermail_field .powermail_textarea:focus,
+.story-teaser .teaser-col .teaser-container .category,
+.story-top-teaser .teaser-container .category p,
+[class*="si-wrapper"],
+.shop-nav-wrapper ul li a,
+.lang-nav-wrapper ul li a,
+.facts-figures,
+.navigation,
+.footer,
+.copy-small li,
+.copy-small,
+.copy-medium,
+.copy,
+.p-intro,
+.ce-table thead,
+.label-light,
+.ce-table .ckbodytext h2,
+body {
+    font-family: "Averta PE Light";
 }
