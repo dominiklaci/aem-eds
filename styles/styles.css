@@ -81,7 +81,7 @@ body {
     line-height: 1.9;
 }
 
-@media print, screen and (min-width: 48em) {
+@media print, screen and (width >= 48em) {
     body {
         font-size: 1rem;
         letter-spacing: 0.2px;
@@ -124,18 +124,23 @@ h6 {
 h1 {
     font-size: var(--heading-font-size-xxl);
 }
+
 h2 {
     font-size: var(--heading-font-size-xl);
 }
+
 h3 {
     font-size: var(--heading-font-size-l);
 }
+
 h4 {
     font-size: var(--heading-font-size-m);
 }
+
 h5 {
     font-size: var(--heading-font-size-s);
 }
+
 h6 {
     font-size: var(--heading-font-size-xs);
 }
@@ -193,24 +198,14 @@ button {
     display: inline-block;
     max-width: 100%;
     margin: 12px 0;
-
-    color: #fff;
-
-    font-family: Averta PE Extrabold;
+    font-family: "Averta PE Extrabold";
     text-transform: uppercase;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     letter-spacing: 2px;
     line-height: 1.286;
-    background-color: #000;
-    color: #fff;
-    cursor: pointer;
-    padding-left: 1.875rem;
-    padding-right: 1.875rem;
-    padding-top: 1.0625rem;
-    padding-bottom: 1.125rem;
-
+    padding: 1.0625rem 1.875rem 1.125rem;
     text-align: center;
     text-decoration: none;
     background-color: var(--link-color);
@@ -299,7 +294,7 @@ main .section.highlight {
 .ce-start-dropdown .ce-start-dropdown-wrapper button.ce-start-dropdown,
 .ce-table table thead th,
 .dce-accordeon .accordion-title,
-.magazine-header .header-text p:first-letter,
+.magazine-header .header-text p::first-letter,
 .story-top-teaser .teaser-container .headline,
 .story-top-teaser .teaser-container .headline p,
 .desktop-menu-wrapper .dropdown.menu .category-parent-link,

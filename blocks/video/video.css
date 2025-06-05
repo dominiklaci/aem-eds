@@ -70,13 +70,6 @@ main > .section.video-container {
     margin: 0;
 }
 
-.video-hero .video-hero-description {
-    font-size: 1.25rem;
-    font-weight: 400;
-    line-height: 1.5;
-    margin: 0;
-}
-
 .video-hero .video-hero-button:any-link {
     /* color: var(--background-color); */
 }

@@ -4,10 +4,10 @@ const { decorateIcons, loadScript, loadCSS } = await import(
 
 const VIDEO_JS_SCRIPT = `${
   window.hlx.aemassets?.codeBasePath ?? ''
-}/blocks/video/videojs/video.min.js`;
+}/vendor/videojs/video.min.js`;
 const VIDEO_JS_CSS = `${
   window.hlx.aemassets?.codeBasePath ?? ''
-}/blocks/video/videojs/video-js.min.css`;
+}/vendor//videojs/video-js.min.css`;
 const VIDEO_JS_LOAD_EVENT = 'videojs-loaded';
 
 function getDeviceSpecificVideoUrl(videoUrl) {
@@ -30,7 +30,6 @@ function parseConfig(block) {
     const posterImage = block.querySelector('picture');
     const videoUrl = block.querySelector('div > div:first-child a').href;
 
-    console.log(videoUrl, 'videoUrl');
     const title = block.querySelector('h1, h2, h3')?.textContent;
     const description = block.querySelector(
       'div > div:nth-child(2) > p',
