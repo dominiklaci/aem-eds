@@ -7,7 +7,7 @@ const VIDEO_JS_SCRIPT = `${
 }/vendor/videojs/video.min.js`;
 const VIDEO_JS_CSS = `${
   window.hlx.aemassets?.codeBasePath ?? ''
-}/vendor//videojs/video-js.min.css`;
+}/vendor/videojs/video-js.min.css`;
 const VIDEO_JS_LOAD_EVENT = 'videojs-loaded';
 
 function getDeviceSpecificVideoUrl(videoUrl) {
