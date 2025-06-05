@@ -1,5 +1,5 @@
-# Your Project's Title...
-Your project's description...
+# AEM Edge Delivery Services - Document-based authoring
+Document-based authoring POC
 
 ## Environments
 - Preview: https://main--aem-eds--dominiklaci.aem.page/
