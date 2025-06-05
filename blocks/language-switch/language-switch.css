@@ -1,10 +1,8 @@
 .language-switch {
-}
-.language-switch {
     display: flex;
     align-items: center;
-    gap: 0.25rem;
-    font-size: 1rem;
+    gap: 4px;
+    font-size: 16px;
 }
 
 .language-switch .lang-btn {
@@ -12,7 +10,7 @@
     border: none;
     color: #000;
     font-size: 14px;
-    font-family: Averta PE Light;
+    font-family: "Averta PE Light", Arial, sans-serif;
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
@@ -30,11 +28,12 @@
 
 .language-switch .lang-separator {
     color: #000;
-    font-size: 1em;
+    font-size: 14px;
     user-select: none;
+    padding: 0 2px;
 }
 
 .language-switch .lang-btn.selected {
-    color: black;
-    font-family: Averta PE Bold;
+    color: #000;
+    font-family: "Averta PE Bold", Arial, sans-serif;
 }

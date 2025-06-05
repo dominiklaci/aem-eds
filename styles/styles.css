@@ -16,8 +16,8 @@
     --light-color: #f8f8f8;
     --dark-color: #505050;
     --text-color: #131313;
-    --link-color: #3b63fb;
-    --link-hover-color: #1d3ecf;
+    --link-color: #000;
+    --link-hover-color: #987147;
 
     /* fonts */
     --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -193,13 +193,24 @@ button {
     display: inline-block;
     max-width: 100%;
     margin: 12px 0;
-    border: 2px solid transparent;
-    border-radius: 2.4em;
-    padding: 0.5em 1.2em;
-    font-family: var(--body-font-family);
+
+    color: #fff;
+
+    font-family: Averta PE Extrabold;
+    text-transform: uppercase;
     font-style: normal;
     font-weight: 500;
-    line-height: 1.25;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 1.286;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    padding-top: 1.0625rem;
+    padding-bottom: 1.125rem;
+
     text-align: center;
     text-decoration: none;
     background-color: var(--link-color);
@@ -208,6 +219,7 @@ button {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    transition: background-color 0.3s ease-in-out;
 }
 
 a.button:hover,
