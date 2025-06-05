@@ -39,6 +39,28 @@ main > .section.video-container {
     transform: translate(-50%, -50%);
     max-width: 500px;
     z-index: 2;
+
+    .video-hero-title {
+        margin-bottom: 2.8125rem;
+        letter-spacing: 2px;
+    }
+}
+
+.video.align-bottom .video-hero-content {
+    top: 0;
+    justify-content: flex-end;
+    padding-bottom: 120px;
+    bottom: 0;
+    align-items: center;
+    transform: translate(-50%);
+}
+
+.video.hide-controls .custom-play-button {
+    display: none;
+}
+
+.video-hero .video-hero-description {
+    display: none;
 }
 
 .video-hero .video-hero-title {
@@ -56,16 +78,7 @@ main > .section.video-container {
 }
 
 .video-hero .video-hero-button:any-link {
-    display: block;
-    background-color: #fff;
-    color: #141411;
-    padding: 12px 24px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    text-decoration: none;
+    /* color: var(--background-color); */
 }
 
 .video-hero > picture {
@@ -295,4 +308,10 @@ main > .section.video-container {
     margin: 0;
     height: 40px;
     width: 40px;
+}
+
+/* todo class */
+.video-wrapper,
+.video {
+    padding: 0 !important;
 }

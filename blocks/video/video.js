@@ -29,6 +29,8 @@ function parseConfig(block) {
   if (block.classList.contains('hero')) {
     const posterImage = block.querySelector('picture');
     const videoUrl = block.querySelector('div > div:first-child a').href;
+
+    console.log(videoUrl, 'videoUrl');
     const title = block.querySelector('h1, h2, h3')?.textContent;
     const description = block.querySelector(
       'div > div:nth-child(2) > p',
@@ -167,7 +169,7 @@ function createPlayButton(container, player) {
 
   decorateIcons(
     button,
-    `${window.hlx.aemassets.codeBasePath ?? ''}/blocks/video`,
+    `${window.hlx?.aemassets?.codeBasePath ?? ''}/blocks/video`,
   );
   updateIcons(player.paused());
 
@@ -450,7 +452,7 @@ function createModal() {
   header.append(closeBtn);
   decorateIcons(
     header,
-    `${window.hlx.aemassets.codeBasePath ?? ''}/blocks/video`,
+    `${window.hlx?.aemassets?.codeBasePath ?? ''}/blocks/video`,
   );
 
   container.append(header);
@@ -482,7 +484,7 @@ async function decorateVideoModal(block, config) {
   playButton.append(playIcon);
   decorateIcons(
     playButton,
-    `${window.hlx.aemassets.codeBasePath ?? ''}/blocks/video`,
+    `${window.hlx?.aemassets?.codeBasePath ?? ''}/blocks/video`,
   );
 
   playButton.addEventListener('click', async () => {
