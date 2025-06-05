@@ -1,9 +1,9 @@
-# Your Project's Title...
-Your project's description...
+# AEM Edge Delivery Services - Document-based authoring
+Document-based authoring POC
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+- Preview: https://main--aem-eds--dominiklaci.aem.page/
+- Live: https://main--aem-eds--dominiklaci.aem.live/
 
 ## Documentation
 
