@@ -43,7 +43,7 @@
 
 .hero h1,
 .hero a.button {
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     margin-left: auto;
     margin-right: auto;
     color: var(--background-color);

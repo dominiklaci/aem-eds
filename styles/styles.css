@@ -39,6 +39,7 @@
 
     /* nav height */
     --nav-height: 70px;
+    --container-max-width: 1700px;
 }
 
 /* fallback fonts */
@@ -261,7 +262,7 @@ main > .section {
 }
 
 main > .section > div {
-    max-width: 1200px;
+    max-width: 1700px;
     margin: auto;
     padding: 0 24px;
 }
@@ -279,7 +280,7 @@ main > .section:first-of-type {
 /* section metadata */
 main .section.light,
 main .section.highlight {
-    background-color: var(--light-color);
+    background-color: #fff;
     margin: 0;
     padding: 40px 0;
 }

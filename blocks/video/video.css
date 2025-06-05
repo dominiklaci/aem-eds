@@ -258,7 +258,7 @@ main > .section.video-container {
 .video-modal-dialog[open] {
     border: none;
     width: 100%;
-    max-width: 1200px;
+    max-width: var(--container-max-width);
     padding: 0;
     overflow: auto;
 }
