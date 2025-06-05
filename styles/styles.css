@@ -169,7 +169,7 @@ pre {
 }
 
 main > div {
-    margin: 40px 16px;
+    padding: 40px 16px;
 }
 
 input,
@@ -256,6 +256,9 @@ main img {
 }
 
 /* sections */
+main > .section {
+    padding: 40px 0;
+}
 
 main > .section > div {
     max-width: 1200px;
