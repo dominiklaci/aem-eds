@@ -285,6 +285,12 @@ main .section.highlight {
     padding: 40px 0;
 }
 
+/* News Section */
+.section.news-page {
+}
+
+/* Styles from Hugo Boss */
+
 .ce-fact-slider .fact-text,
 .ce-fact-slider .fact-subline,
 .ce-fact-slider .fact-number,
