@@ -3,8 +3,8 @@ footer {
     color: white;
     font-size: var(--body-font-size-xs);
 
-    a {
-        color: white !important;
+    a:any-link {
+        color: white;
     }
 }
 
@@ -14,8 +14,40 @@ footer .footer > div {
     padding: 40px 24px 24px;
 }
 
-footer .footer p {
+footer .columns p {
     margin: 0;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+footer .columns > div {
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer .columns > div > div {
+    max-width: 275px;
+}
+
+footer .columns a {
+    display: block;
+    line-height: 0.9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #987147;
+}
+
+footer h3 {
+    margin-bottom: 32px;
+}
+
+footer h6 {
+    font-size: 14px;
+    margin: 24px 0;
 }
 
 @media (width >= 900px) {
