@@ -7,7 +7,11 @@ indices:
     target: /en/query-index.json
     properties:
       title:
-        select: head > meta[name="og:title"]
+        select: head > meta[property="og:title"]
+        value: |
+          attribute(el, 'content')
+      pageTitle:
+        select: head > title
         value: |
           attribute(el, 'content')
       description:
