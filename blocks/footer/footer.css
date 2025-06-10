@@ -22,6 +22,10 @@ footer .columns p {
     gap: 8px;
 }
 
+footer .footer-copyright.columns p {
+    flex-direction: row;
+}
+
 footer .columns > div {
     align-items: flex-start;
     justify-content: space-between;
@@ -29,6 +33,21 @@ footer .columns > div {
 
 footer .columns > div > div {
     max-width: 275px;
+}
+
+footer .footer-copyright.columns > div > div {
+    max-width: initial;
+    flex: 1;
+}
+
+.footer-copyright.columns > div > div:first-child p {
+    justify-self: left;
+}
+.footer-copyright.columns > div > div:nth-child(2) p {
+    justify-self: center;
+}
+.footer-copyright.columns > div > div:last-child p {
+    justify-self: right;
 }
 
 footer .columns a {
@@ -50,8 +69,48 @@ footer h6 {
     margin: 24px 0;
 }
 
+footer .icon {
+    filter: invert(100%) sepia(0%) saturate(7484%) hue-rotate(139deg)
+        brightness(102%) contrast(103%);
+
+    cursor: pointer;
+}
+
+footer .icon:hover {
+    filter: brightness(0) saturate(100%) invert(47%) sepia(13%) saturate(1357%)
+        hue-rotate(350deg) brightness(94%) contrast(92%);
+}
+
+.cards-flex ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-flex ul li {
+    width: calc(50% - 14px);
+}
+
+.footer-copyright {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid rgb(99, 99, 99);
+}
+
 @media (width >= 900px) {
     footer .footer > div {
         padding: 40px 32px 24px;
+    }
+}
+
+@media (width < 900px) {
+    .footer-copyright.columns > div > div:first-child p,
+    .footer-copyright.columns > div > div:nth-child(2) p,
+    .footer-copyright.columns > div > div:last-child p {
+        justify-self: left;
+    }
+
+    .cards-flex ul li {
+        width: 100%;
+        max-width: 100%;
     }
 }
