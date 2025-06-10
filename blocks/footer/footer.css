@@ -81,15 +81,6 @@ footer .icon:hover {
         hue-rotate(350deg) brightness(94%) contrast(92%);
 }
 
-.cards-flex ul {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.cards-flex ul li {
-    width: calc(50% - 14px);
-}
-
 .footer-copyright {
     margin-top: 48px;
     padding-top: 24px;
@@ -107,10 +98,5 @@ footer .icon:hover {
     .footer-copyright.columns > div > div:nth-child(2) p,
     .footer-copyright.columns > div > div:last-child p {
         justify-self: left;
-    }
-
-    .cards-flex ul li {
-        width: 100%;
-        max-width: 100%;
     }
 }
