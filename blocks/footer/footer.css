@@ -24,6 +24,7 @@ footer .columns p {
 
 footer .footer-copyright.columns p {
     flex-direction: row;
+    align-items: center;
 }
 
 footer .columns > div {
@@ -70,9 +71,6 @@ footer h6 {
 }
 
 footer .icon {
-    filter: invert(100%) sepia(0%) saturate(7484%) hue-rotate(139deg)
-        brightness(102%) contrast(103%);
-
     cursor: pointer;
 }
 
