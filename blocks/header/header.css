@@ -229,3 +229,9 @@ header .nav-tools a.button:hover,
 header .nav-tools a.button:focus {
     text-decoration: underline;
 }
+
+@media screen and (width <768px) {
+    .nav-tools > div:not(:last-of-type) {
+        display: none;
+    }
+}

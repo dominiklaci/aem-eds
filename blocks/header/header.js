@@ -1,5 +1,5 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
+import { getMetadata } from "../../scripts/aem.js";
+import { loadFragment } from "../fragment/fragment.js";
 
 // media query match that indicates mobile/tablet width
 // const isDesktop = window.matchMedia('(min-width: 900px)');
@@ -63,9 +63,9 @@ const isDesktop = false;
  */
 function toggleAllNavSections(sections, expanded = false) {
   sections
-    .querySelectorAll('.nav-sections .default-content-wrapper > ul > li')
+    .querySelectorAll(".nav-sections .default-content-wrapper > ul > li")
     .forEach((section) => {
-      section.setAttribute('aria-expanded', expanded);
+      section.setAttribute("aria-expanded", expanded);
     });
 }
 
@@ -121,42 +121,49 @@ function toggleAllNavSections(sections, expanded = false) {
  */
 export default async function decorate(block) {
   // load nav as fragment
-  const navMeta = getMetadata('nav');
-  const navPath = navMeta ? new URL(navMeta, window.location).pathname : '/nav';
+  const navMeta = getMetadata("nav");
+  const navPath = navMeta ? new URL(navMeta, window.location).pathname : "/nav";
   const fragment = await loadFragment(navPath);
 
+  const path = window.location.pathname;
+  let locale = "";
+  if (path.startsWith("/en/")) locale = "/en";
+  else if (path.startsWith("/de/")) locale = "/de";
+
   // decorate nav DOM
-  block.textContent = '';
-  const nav = document.createElement('nav');
-  nav.id = 'nav';
+  block.textContent = "";
+  const nav = document.createElement("nav");
+  nav.id = "nav";
   while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
 
-  const classes = ['brand', 'sections', 'tools'];
+  const classes = ["brand", "sections", "tools"];
   classes.forEach((c, i) => {
     const section = nav.children[i];
     if (section) section.classList.add(`nav-${c}`);
   });
 
-  const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
+  const navBrand = nav.querySelector(".nav-brand");
+  const brandLink = navBrand.querySelector(".button");
   if (brandLink) {
-    brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
+    brandLink.className = "";
+    brandLink.closest(".button-container").className = "";
   }
 
-  const navSections = nav.querySelector('.nav-sections');
+  const navSections = nav.querySelector(".nav-sections");
   if (navSections) {
     navSections
-      .querySelectorAll(':scope .default-content-wrapper > ul > li')
+      .querySelectorAll(":scope .default-content-wrapper > ul > li")
       .forEach((navSection) => {
-        if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
-        navSection.addEventListener('click', () => {
+        if (navSection.querySelector("ul"))
+          navSection.classList.add("nav-drop");
+        navSection.addEventListener("click", () => {
           if (isDesktop) {
-            const expanded = navSection.getAttribute('aria-expanded') === 'true';
+            const expanded =
+              navSection.getAttribute("aria-expanded") === "true";
             toggleAllNavSections(navSections);
             navSection.setAttribute(
-              'aria-expanded',
-              expanded ? 'false' : 'true',
+              "aria-expanded",
+              expanded ? "false" : "true"
             );
           }
         });
@@ -164,33 +171,36 @@ export default async function decorate(block) {
   }
 
   // hamburger for mobile
-  const hamburger = document.createElement('div');
-  hamburger.classList.add('nav-hamburger');
+  const hamburger = document.createElement("div");
+  hamburger.classList.add("nav-hamburger");
   hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>`;
 
-  const homeBtn = document.createElement('a');
-  homeBtn.classList.add('nav-home');
-  homeBtn.setAttribute('href', '/');
-  homeBtn.setAttribute('aria-label', 'Home');
+  const homeBtn = document.createElement("a");
+  homeBtn.classList.add("nav-home");
+  homeBtn.setAttribute("href", "/");
+  homeBtn.setAttribute("aria-label", "Home");
   homeBtn.innerHTML = '<span class="nav-home-icon"></span>';
 
   // wrap both in a container
-  const mobileBtns = document.createElement('div');
-  mobileBtns.classList.add('nav-buttons');
+  const mobileBtns = document.createElement("div");
+  mobileBtns.classList.add("nav-buttons");
   mobileBtns.append(hamburger, homeBtn);
 
   // prepend the container to nav
   nav.prepend(mobileBtns);
 
   // hamburger.addEventListener("click", () => toggleMenu(nav, navSections));
-  nav.setAttribute('aria-expanded', 'false');
+  nav.setAttribute("aria-expanded", "false");
   // prevent mobile nav behavior on window resize
   // toggleMenu(nav, navSections, isDesktop);
 
-  const navWrapper = document.createElement('div');
-  navWrapper.className = 'nav-wrapper';
+  const navWrapper = document.createElement("div");
+  navWrapper.className = "nav-wrapper";
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  const search = document.querySelector("span.icon-search")?.closest("a");
+  search.href = locale + "/search" || "/search"; // fallback to root search if no locale
 }
